@@ -7,7 +7,8 @@
 <p>Your receipts, their photos and details, saved cards (a nickname and the last 4 digits only), clients, reports and settings are stored only on your iPhone (and in your iPhone's own iCloud or computer backups, if you use them). Deleting the app deletes them from the phone.</p>
 
 <h2>Reading receipts with AI</h2>
-<p>When you scan a receipt, its page photos and your list of expense types are sent over an encrypted connection to Receipted's server (hosted by Supabase in the United States). The server passes them to Anthropic's AI model, which reads the merchant, date, total and tax and sends the result back to your phone. Receipted's server does not store your photos or what was read from them.</p>
+<p>Receipted asks before the first receipt is read, and nothing is sent unless you choose <em>Allow AI reading</em>. You can turn it off any time in <em>Settings → Read receipts with AI</em> and type receipts in yourself.</p>
+<p>When AI reading is on and you scan a receipt, its page photos and your list of expense types are sent over an encrypted connection to Receipted's server (hosted by Supabase in the United States). The server passes them to Anthropic's AI model, which reads the merchant, date, total, tax and, if printed, the card's last four digits, and sends the result back to your phone. Receipted's server does not store your photos or what was read from them.</p>
 <p>Anthropic processes this under its commercial terms: it does not use it to train its models, and may keep it for a limited time for safety and abuse monitoring. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</p>
 <p>For a no-receipt photo (a gas pump or parking screen), only that photo is sent. Your location is never sent to Receipted's server.</p>
 
