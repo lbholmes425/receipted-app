@@ -4,7 +4,7 @@
 <p>Receipted is built to keep your receipts yours. There are no accounts, ads, analytics or tracking. This page explains exactly what leaves your phone, and why.</p>
 
 <h2>What stays on your phone</h2>
-<p>Your receipts, their photos and details, saved cards (a nickname and the last 4 digits only), clients, reports and settings are stored only on your iPhone. Deleting the app deletes them.</p>
+<p>Your receipts, their photos and details, saved cards (a nickname and the last 4 digits only), clients, reports and settings are stored only on your iPhone (and in your iPhone's own iCloud or computer backups, if you use them). Deleting the app deletes them from the phone.</p>
 
 <h2>Reading receipts with AI</h2>
 <p>When you scan a receipt, its page photos and your list of expense types are sent over an encrypted connection to Receipted's server (hosted by Supabase in the United States). The server passes them to Anthropic's AI model, which reads the merchant, date, total and tax and sends the result back to your phone. Receipted's server does not store your photos or what was read from them.</p>
@@ -12,16 +12,15 @@
 <p>For a no-receipt photo (a gas pump or parking screen), only that photo is sent. Your location is never sent to Receipted's server.</p>
 
 <h2>Daily limits</h2>
-<p>To keep the service affordable, the server counts AI reads per day. It uses a random ID made by the app when it's installed (not linked to you, your device or your Apple ID) and your network address. Only the daily counts are kept, and they are deleted after 30 days.</p>
+<p>To keep the service affordable, the server counts AI reads per day. It uses a random ID made by the app when it's installed (not linked to you, your device or your Apple ID) and your network address. Neither is stored as-is: each is turned into a one-way code before it's counted, so it can't be read back. Only these coded daily counts are kept, and they are deleted after 30 days.</p>
 
 <h2>Location</h2>
 <p>Receipted asks for your location only when you use No-Receipt Capture. It is used on your phone, with Apple's map services, to find the merchant and address. It is saved with that receipt on your phone and printed on its missing-receipt page, which goes only where you send it.</p>
 
-<h2>OneDrive and Google Drive (Receipted Plus)</h2>
-<p>If you turn on auto-upload, receipt files go directly from your phone to your own OneDrive or Google Drive. They never pass through Receipted's server. Sign-in is handled by Microsoft or Google, and the resulting sign-in tokens are kept in your iPhone's Keychain.</p>
+<h2>OneDrive (Receipted Plus)</h2>
+<p>If you turn on auto-upload, receipt files go directly from your phone to your own OneDrive. They never pass through Receipted's server. Sign-in is handled by Microsoft, and the resulting sign-in tokens are kept in your iPhone's Keychain.</p>
 <ul>
 <li><strong>Microsoft:</strong> permission to read and write files in your OneDrive (to save receipts) and to read your basic profile (to show which account is signed in).</li>
-<li><strong>Google:</strong> access only to files Receipted creates. It cannot see anything else in your Drive.</li>
 </ul>
 <p>Receipted never sees your password. Signing out deletes the tokens from your phone.</p>
 
